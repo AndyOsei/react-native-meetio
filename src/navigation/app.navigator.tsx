@@ -1,7 +1,7 @@
-import * as React from "react-native";
+import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Home from "../screens/home";
+import { Home } from "../screens";
 
 import ComponentsNavigator from "./components.navigator";
 
