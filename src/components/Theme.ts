@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createBox, createText } from "@shopify/restyle";
 
 const palette = {
@@ -17,24 +16,10 @@ const palette = {
   lightCyan: "#4EBDEF",
   blue400: "#4666E5",
   darkCyanBlue: "#132641",
-=======
-const palette = {
-  purpleLight: "#8C6FF7",
-  purplePrimary: "#5A31F4",
-  purpleDark: "#3F22AB",
-
-  greenLight: "#56DCBA",
-  greenPrimary: "#0ECD9D",
-  greenDark: "#0A906E",
-
-  black: "#0B0B0B",
-  white: "#F0F2F3",
->>>>>>> 748f74f75ea3484db6dd7baa4435bea6e35e59d5
 };
 
 const theme = {
   colors: {
-<<<<<<< HEAD
     white: palette.white,
     mainBackground: palette.lightBlueMagenta100,
     black: palette.black,
@@ -51,10 +36,6 @@ const theme = {
     lightCyan: palette.lightCyan,
     blue400: palette.blue400,
     darkCyanBlue: palette.darkCyanBlue,
-=======
-    mainBackground: palette.white,
-    cardPrimaryBackground: palette.purplePrimary,
->>>>>>> 748f74f75ea3484db6dd7baa4435bea6e35e59d5
   },
   spacing: {
     s: 8,
@@ -69,9 +50,6 @@ const theme = {
 };
 
 export type Theme = typeof theme;
-<<<<<<< HEAD
 export const Box = createBox<Theme>();
 export const Text = createText<Theme>();
-=======
->>>>>>> 748f74f75ea3484db6dd7baa4435bea6e35e59d5
 export default theme;
