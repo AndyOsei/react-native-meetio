@@ -21,7 +21,6 @@ const palette = {
 const theme = {
   colors: {
     white: palette.white,
-    mainBackground: palette.lightBlueMagenta100,
     black: palette.black,
     lightPink: palette.lightPink,
     lightBlue: palette.lightBlue,
@@ -36,6 +35,7 @@ const theme = {
     lightCyan: palette.lightCyan,
     blue400: palette.blue400,
     darkCyanBlue: palette.darkCyanBlue,
+    mainBackground: palette.white,
   },
   spacing: {
     s: 8,
@@ -46,6 +46,20 @@ const theme = {
   breakpoints: {
     phone: 0,
     tablet: 768,
+  },
+  textVariants: {
+    title: {
+      fontFamily: "Montserrat-Bold",
+      fontSize: 24,
+      lineSpacing: 24,
+      textAlign: "left",
+    },
+    text1: {
+      fontFamily: "Montserrat-Regular",
+      fontSize: 14,
+      lineSpacing: 22,
+      textAlign: "left",
+    },
   },
 };
 

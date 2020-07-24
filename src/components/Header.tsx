@@ -1,43 +1,50 @@
 import React from "react";
 import { Dimensions } from "react-native";
 
-import * as Icons from "./icons";
 import { Box, Text } from "./Theme";
 
 interface HeaderProps {
   title: string;
+  height?: number;
+  rightIcon: React.ReactNode;
+  leftIcon: React.ReactNode;
 }
 
 const { width } = Dimensions.get("window");
 
-const Header: React.FC<HeaderProps> = ({ title }) => {
+const Header: React.FC<HeaderProps> = ({
+  title,
+  height,
+  rightIcon,
+  leftIcon,
+  ...rest
+}) => {
+  const showIcon = rightIcon || leftIcon;
+  const flex = showIcon ? 0.5 : 1;
   return (
     <Box
-      height={180}
-      {...{ width }}
+      height={height || 72}
       backgroundColor="white"
       borderBottomLeftRadius={80}
+      {...{ width }}
+      {...rest}
     >
       <Box flex={1} marginTop="l">
-        <Box
-          flex={0.5}
-          flexDirection="row"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <Box marginLeft="m">
-            <Icons.Back />
+        {showIcon && (
+          <Box
+            flex={flex}
+            flexDirection="row"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            {leftIcon}
+            {rightIcon}
           </Box>
-          <Box marginRight="m">
-            <Icons.Filter />
-          </Box>
-        </Box>
-        <Box
-          flex={0.5}
-          alignItems="flex-start"
-          // backgroundColor="lightPink"
-        >
-          <Text marginLeft="xl">{title}</Text>
+        )}
+        <Box flex={flex} alignItems="flex-start">
+          <Text variant="title" marginLeft="xl">
+            {title}
+          </Text>
         </Box>
       </Box>
     </Box>
