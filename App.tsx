@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ThemeProvider } from "@shopify/restyle";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { LoadAsset, theme } from "./src/components";
 import { AppNavigator } from "./src/navigation";
@@ -16,9 +17,11 @@ const assets = [...Object.values(Images)];
 export default function App() {
   return (
     <ThemeProvider {...{ theme }}>
-      <LoadAsset {...{ fonts, assets }}>
-        <AppNavigator />
-      </LoadAsset>
+      <SafeAreaProvider>
+        <LoadAsset {...{ fonts, assets }}>
+          <AppNavigator />
+        </LoadAsset>
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 }

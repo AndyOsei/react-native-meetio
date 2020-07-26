@@ -1,12 +1,20 @@
 import * as React from "react";
 import { Image, StyleSheet, View } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { ScrollView, RectButton } from "react-native-gesture-handler";
+import { StackNavigationProp } from "@react-navigation/stack/lib/typescript/src/types";
 
 import { Box, Header, Icons, Text } from "../../components";
 import { Images } from "../../constants";
+import { AppStackParamList } from "../../types";
+import AppRoute from "../../navigation/app.routes";
+
+interface HomeProps {
+  navigation: StackNavigationProp<AppStackParamList, AppRoute.HOME>;
+}
 
 const LEFT = -25;
 const BUTTON_SIZE = 52;
+const BORDER_BOTTOM_LEFT_RADIUS = 80;
 
 const styles = StyleSheet.create({
   headerContainer: {
@@ -32,6 +40,11 @@ const styles = StyleSheet.create({
   categoryTitleContainer: {
     marginTop: 150,
     marginLeft: 80,
+  },
+  categoryButton: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "flex-start",
   },
   addButton: {
     position: "absolute",
@@ -69,7 +82,10 @@ export const Categories = [
   },
 ];
 
-const Home = () => {
+const Home: React.FC<HomeProps> = ({ navigation }) => {
+  const goToComponents = () => {
+    navigation.navigate(AppRoute.COMPONENTS);
+  };
   return (
     <Box flex={1} backgroundColor="lightBlue">
       <ScrollView>
@@ -78,91 +94,78 @@ const Home = () => {
             {...StyleSheet.absoluteFillObject}
             top={526}
             height={246}
-            borderBottomLeftRadius={80}
+            borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}
             backgroundColor="white"
           >
-            <Box
-              flex={1}
-              backgroundColor="darkCyanBlue"
-              borderBottomLeftRadius={80}
-            >
+            <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
               <Image
                 source={Images.bg4}
                 style={styles.activityProfilesImageStyle}
               />
-              <Box flex={1} justifyContent="center" alignItems="flex-start">
+              <RectButton style={styles.categoryButton}>
                 <Box style={styles.categoryTitleContainer}>
-                  <Text variant="title" color="white">
+                  <Text variant="title1" color="white">
                     Activities & Profiles
                   </Text>
                 </Box>
-              </Box>
+              </RectButton>
             </Box>
           </Box>
           <Box
             {...StyleSheet.absoluteFillObject}
             top={385}
             height={233}
-            borderBottomLeftRadius={80}
+            borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}
           >
-            <Box
-              flex={1}
-              backgroundColor="yellowGreen"
-              borderBottomLeftRadius={80}
-            >
+            <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
               <Image source={Images.bg3} style={styles.onboardingImageStyle} />
-              <Box flex={1} justifyContent="center" alignItems="flex-start">
+              <RectButton style={styles.categoryButton}>
                 <Box style={styles.categoryTitleContainer}>
-                  <Text variant="title" color="white">
+                  <Text variant="title1" color="white">
                     Onboarding
                   </Text>
                 </Box>
-              </Box>
+              </RectButton>
             </Box>
           </Box>
           <Box
             {...StyleSheet.absoluteFillObject}
             top={244}
             height={219}
-            borderBottomLeftRadius={80}
+            borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}
           >
-            <Box
-              flex={1}
-              backgroundColor="lightCyan"
-              borderBottomLeftRadius={80}
-            >
+            <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
               <Image source={Images.bg2} style={styles.componentsImageStyle} />
-              <Box flex={1} justifyContent="center" alignItems="flex-start">
+              <RectButton
+                style={styles.categoryButton}
+                onPress={goToComponents}
+              >
                 <Box style={styles.categoryTitleContainer}>
-                  <Text variant="title" color="white">
+                  <Text variant="title1" color="white">
                     Components
                   </Text>
                 </Box>
-              </Box>
+              </RectButton>
             </Box>
           </Box>
           <Box
             {...StyleSheet.absoluteFillObject}
             top={63}
             height={247}
-            borderBottomLeftRadius={80}
+            borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}
           >
-            <Box
-              flex={1}
-              backgroundColor="lightPink"
-              borderBottomLeftRadius={80}
-            >
+            <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
               <Image
                 source={Images.bg1}
                 style={{ ...StyleSheet.absoluteFillObject, left: LEFT }}
               />
-              <Box flex={1} justifyContent="center" alignItems="flex-start">
+              <RectButton style={styles.categoryButton}>
                 <Box style={styles.categoryTitleContainer}>
-                  <Text variant="title" color="white">
+                  <Text variant="title1" color="white">
                     Main App
                   </Text>
                 </Box>
-              </Box>
+              </RectButton>
             </Box>
           </Box>
         </Box>
@@ -171,6 +174,7 @@ const Home = () => {
         <Header
           title="Categories"
           height={180}
+          borderBottomLeftRadius={80}
           leftIcon={
             <Box marginLeft="m">
               <Icons.Back />

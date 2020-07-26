@@ -5,6 +5,7 @@ const palette = {
   white: "#FFFFFF",
   lightPink: "#D47FA6",
   lightBlue: "#9599B3",
+  blueMagenta: "#998fa2",
   lightBlueMagenta100: "#DEDCE0",
   lightBlueMagenta400: "#8A56AC",
   darkBlueMagenta800: "#241332",
@@ -16,6 +17,7 @@ const palette = {
   lightCyan: "#4EBDEF",
   blue400: "#4666E5",
   darkCyanBlue: "#132641",
+  gray: "#707070",
 };
 
 const theme = {
@@ -24,6 +26,7 @@ const theme = {
     black: palette.black,
     lightPink: palette.lightPink,
     lightBlue: palette.lightBlue,
+    blueMagenta: palette.blueMagenta,
     lightBlueMagenta100: palette.lightBlueMagenta100,
     lightBlueMagenta400: palette.lightBlueMagenta400,
     darkBlueMagenta800: palette.darkBlueMagenta800,
@@ -36,6 +39,7 @@ const theme = {
     blue400: palette.blue400,
     darkCyanBlue: palette.darkCyanBlue,
     mainBackground: palette.white,
+    gray: palette.gray,
   },
   spacing: {
     s: 8,
@@ -48,16 +52,22 @@ const theme = {
     tablet: 768,
   },
   textVariants: {
-    title: {
+    title1: {
       fontFamily: "Montserrat-Bold",
       fontSize: 24,
-      lineSpacing: 24,
+      lineHeight: 24,
+      textAlign: "left",
+    },
+    title2: {
+      fontFamily: "Montserrat-Semibold",
+      fontSize: 12,
+      lineHeight: 40,
       textAlign: "left",
     },
     text1: {
       fontFamily: "Montserrat-Regular",
       fontSize: 14,
-      lineSpacing: 22,
+      lineHeight: 22,
       textAlign: "left",
     },
   },
