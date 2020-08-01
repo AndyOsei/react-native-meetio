@@ -7,7 +7,8 @@ A free UI Kit built in react native to speed up your workflow and get your app r
 Boost your productivity and cut down time to market in half by using this ui kit implemented using expo and known best practices in the industry.
 You can also draw inspiration & ideas from it for your next project or it could serve as a learning resource for building high quality react native apps.
 
-![Meetio UI KIT](assets/meetio1.gif "Social Meetup UI Kit")
+![Meetio App Demo](meetio1.gif "Social Meetup App Demo")
+![Meetio UI Screens](meetio2.png "Social Meetup UI Screens")
 
 ### BUILT WITH
 - Expo
