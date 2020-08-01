@@ -24,7 +24,7 @@ const Card2 = () => {
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <Card width={150} height={240} marginHorizontal="m">
                 <Image
-                  source={Images.MEDITATION_2}
+                  source={Images.MEDITATION2}
                   style={StyleSheet.absoluteFillObject}
                 />
                 <Box
@@ -60,7 +60,7 @@ const Card2 = () => {
               </Card>
               <Card width={150} height={240} marginHorizontal="m">
                 <Image
-                  source={Images.YOGA_2}
+                  source={Images.YOGA2}
                   style={StyleSheet.absoluteFillObject}
                 />
                 <Box
