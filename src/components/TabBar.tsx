@@ -1,5 +1,5 @@
 import React from "react";
-import { RectButton } from "react-native-gesture-handler";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 import { Box, Text } from "./Theme";
 
@@ -15,23 +15,22 @@ interface TabProps {
 
 const Tab: React.FC<TabProps> = ({ title, active, onPress }) => {
   return (
-    <RectButton {...{ onPress }}>
+    <TouchableWithoutFeedback {...{ onPress }}>
       <Box
         borderRadius={30}
-        //backgroundColor="lightBlueMagenta400"
         backgroundColor={active ? "lightBlueMagenta400" : "white"}
         marginHorizontal="m"
         style={{ paddingHorizontal: 10 }}
       >
         <Text
-          variant="title2"
+          variant="title3"
           color={active ? "white" : "blueMagenta"}
           lineHeight={26}
         >
           {title}
         </Text>
       </Box>
-    </RectButton>
+    </TouchableWithoutFeedback>
   );
 };
 

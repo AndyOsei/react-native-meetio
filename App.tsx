@@ -10,6 +10,8 @@ const fonts = {
   "Montserrat-Bold": require("./assets/fonts/Montserrat/Montserrat-Bold.ttf"),
   "Montserrat-Semibold": require("./assets/fonts/Montserrat/Montserrat-SemiBold.ttf"),
   "Montserrat-Regular": require("./assets/fonts/Montserrat/Montserrat-Regular.ttf"),
+  "Montserrat-Medium": require("./assets/fonts/Montserrat/Montserrat-Medium.ttf"),
+  "Montserrat-MediumItalic": require("./assets/fonts/Montserrat/Montserrat-MediumItalic.ttf"),
 };
 
 const assets = [...Object.values(Images)];

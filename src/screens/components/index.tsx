@@ -6,7 +6,8 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Box } from "../../components";
 
 import HeadersInputs from "./HeadersInputs";
-import Cards from "./Cards";
+import Cards1 from "./Cards1";
+import Cards2 from "./Cards2";
 
 const { width } = Dimensions.get("window");
 
@@ -26,7 +27,8 @@ const Components = () => {
         bounces={false}
       >
         <HeadersInputs />
-        <Cards />
+        <Cards1 />
+        <Cards2 />
       </ScrollView>
     </Box>
   );

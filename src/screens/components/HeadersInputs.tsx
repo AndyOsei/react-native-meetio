@@ -42,8 +42,8 @@ const HeadersInputs = () => {
   return (
     <Box backgroundColor="lightBlueMagenta100" width={width}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Box width={width} height={288}>
-          <Box {...StyleSheet.absoluteFillObject} height={156} top={20}>
+        <Box width={width} height={200} marginBottom="l">
+          <Box {...StyleSheet.absoluteFillObject} height={156} top={45}>
             <Header
               title={
                 <Text variant="title1" style={{ marginLeft: 100 }}>
@@ -52,7 +52,7 @@ const HeadersInputs = () => {
               }
               titleVariant="title1"
               backgroundColor="white"
-              height={228}
+              height={156}
               borderBottomLeftRadius={80}
               leftIcon={
                 <Box marginLeft="m">
@@ -70,7 +70,8 @@ const HeadersInputs = () => {
           </Box>
           <Header
             title="HEADERS"
-            titleVariant="title2"
+            titleVariant="title3"
+            titleColor="darkBlueMagenta800"
             backgroundColor="lightBlueMagenta100"
             borderBottomLeftRadius={70}
           />
@@ -105,12 +106,11 @@ const HeadersInputs = () => {
           <TabBar tabs={["TODAY", "WEEK", "MONTH"]} />
         </Header>
         <Box marginTop="xl">
-          <Text variant="title2" marginLeft="l">
+          <Text variant="title3" marginLeft="l">
             TEXTFIELDS
           </Text>
           <Input
             ref={inputRef1}
-            height={50}
             padding="m"
             inputProps={{
               placeholder: "Name",
@@ -119,12 +119,12 @@ const HeadersInputs = () => {
               style: {
                 borderBottomColor: theme.colors.gray,
                 borderBottomWidth: StyleSheet.hairlineWidth,
+                padding: 5,
               },
             }}
           />
           <Input
             ref={inputRef2}
-            height={50}
             padding="m"
             marginTop="m"
             inputProps={{
@@ -134,12 +134,12 @@ const HeadersInputs = () => {
               style: {
                 borderBottomColor: theme.colors.gray,
                 borderBottomWidth: StyleSheet.hairlineWidth,
+                padding: 5,
               },
             }}
           />
           <Input
             ref={inputRef3}
-            height={50}
             padding="m"
             marginVertical="m"
             backgroundColor="darkBlueMagenta800"
@@ -159,6 +159,7 @@ const HeadersInputs = () => {
                 });
               },
               style: {
+                padding: 10,
                 borderBottomColor: theme.colors.gray,
                 borderBottomWidth: StyleSheet.hairlineWidth,
               },

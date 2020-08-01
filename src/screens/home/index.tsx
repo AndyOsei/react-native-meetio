@@ -1,6 +1,9 @@
 import * as React from "react";
-import { Image, StyleSheet, View } from "react-native";
-import { ScrollView, RectButton } from "react-native-gesture-handler";
+import { Image, StyleSheet, View, Dimensions } from "react-native";
+import {
+  ScrollView,
+  TouchableWithoutFeedback,
+} from "react-native-gesture-handler";
 import { StackNavigationProp } from "@react-navigation/stack/lib/typescript/src/types";
 
 import { Box, Header, Icons, Text } from "../../components";
@@ -42,14 +45,13 @@ const styles = StyleSheet.create({
     marginLeft: 80,
   },
   categoryButton: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "flex-start",
   },
   addButton: {
     position: "absolute",
     right: 16,
-    bottom: 50,
+    bottom: 20,
     backgroundColor: "white",
     width: BUTTON_SIZE,
     height: BUTTON_SIZE,
@@ -63,32 +65,40 @@ export const Categories = [
   {
     title: "Outdoors",
     subtitle: "128 topics - 4k articles",
-    source: Images.bg1,
+    source: Images.BG1,
   },
   {
     title: "Technology",
     subtitle: "110 topics - 1k articles",
-    source: Images.bg2,
+    source: Images.BG2,
   },
   {
     title: "Health & Wellness",
     subtitle: "56 topics - 2k articles",
-    source: Images.bg3,
+    source: Images.BG3,
   },
   {
     title: "Music",
     subtitle: "128 topics - 4k articles",
-    source: Images.bg4,
+    source: Images.BG4,
   },
 ];
+
+const { height } = Dimensions.get("window");
 
 const Home: React.FC<HomeProps> = ({ navigation }) => {
   const goToComponents = () => {
     navigation.navigate(AppRoute.COMPONENTS);
   };
   return (
-    <Box flex={1} backgroundColor="lightBlue">
-      <ScrollView>
+    <Box flex={1} backgroundColor="lightBlue300">
+      <ScrollView
+        contentContainerStyle={{
+          paddingBottom: 200,
+          height: height + height / 4,
+        }}
+        showsVerticalScrollIndicator={false}
+      >
         <Box flex={1}>
           <Box
             {...StyleSheet.absoluteFillObject}
@@ -102,13 +112,15 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
                 source={Images.bg4}
                 style={styles.activityProfilesImageStyle}
               />
-              <RectButton style={styles.categoryButton}>
+              <TouchableWithoutFeedback
+                style={[styles.categoryButton, { height: 246 }]}
+              >
                 <Box style={styles.categoryTitleContainer}>
                   <Text variant="title1" color="white">
                     Activities & Profiles
                   </Text>
                 </Box>
-              </RectButton>
+              </TouchableWithoutFeedback>
             </Box>
           </Box>
           <Box
@@ -119,13 +131,15 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           >
             <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
               <Image source={Images.bg3} style={styles.onboardingImageStyle} />
-              <RectButton style={styles.categoryButton}>
+              <TouchableWithoutFeedback
+                style={[styles.categoryButton, { height: 233 }]}
+              >
                 <Box style={styles.categoryTitleContainer}>
                   <Text variant="title1" color="white">
                     Onboarding
                   </Text>
                 </Box>
-              </RectButton>
+              </TouchableWithoutFeedback>
             </Box>
           </Box>
           <Box
@@ -136,8 +150,8 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           >
             <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
               <Image source={Images.bg2} style={styles.componentsImageStyle} />
-              <RectButton
-                style={styles.categoryButton}
+              <TouchableWithoutFeedback
+                style={[styles.categoryButton, { height: 219 }]}
                 onPress={goToComponents}
               >
                 <Box style={styles.categoryTitleContainer}>
@@ -145,7 +159,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
                     Components
                   </Text>
                 </Box>
-              </RectButton>
+              </TouchableWithoutFeedback>
             </Box>
           </Box>
           <Box
@@ -159,13 +173,15 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
                 source={Images.bg1}
                 style={{ ...StyleSheet.absoluteFillObject, left: LEFT }}
               />
-              <RectButton style={styles.categoryButton}>
+              <TouchableWithoutFeedback
+                style={[styles.categoryButton, { height: 247 }]}
+              >
                 <Box style={styles.categoryTitleContainer}>
                   <Text variant="title1" color="white">
                     Main App
                   </Text>
                 </Box>
-              </RectButton>
+              </TouchableWithoutFeedback>
             </Box>
           </Box>
         </Box>
