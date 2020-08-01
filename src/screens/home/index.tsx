@@ -61,29 +61,6 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Categories = [
-  {
-    title: "Outdoors",
-    subtitle: "128 topics - 4k articles",
-    source: Images.BG1,
-  },
-  {
-    title: "Technology",
-    subtitle: "110 topics - 1k articles",
-    source: Images.BG2,
-  },
-  {
-    title: "Health & Wellness",
-    subtitle: "56 topics - 2k articles",
-    source: Images.BG3,
-  },
-  {
-    title: "Music",
-    subtitle: "128 topics - 4k articles",
-    source: Images.BG4,
-  },
-];
-
 const { height } = Dimensions.get("window");
 
 const Home: React.FC<HomeProps> = ({ navigation }) => {
@@ -109,7 +86,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           >
             <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
               <Image
-                source={Images.bg4}
+                source={Images.BG4}
                 style={styles.activityProfilesImageStyle}
               />
               <TouchableWithoutFeedback
@@ -130,7 +107,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
             borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}
           >
             <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
-              <Image source={Images.bg3} style={styles.onboardingImageStyle} />
+              <Image source={Images.BG3} style={styles.onboardingImageStyle} />
               <TouchableWithoutFeedback
                 style={[styles.categoryButton, { height: 233 }]}
               >
@@ -149,7 +126,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
             borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}
           >
             <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
-              <Image source={Images.bg2} style={styles.componentsImageStyle} />
+              <Image source={Images.BG2} style={styles.componentsImageStyle} />
               <TouchableWithoutFeedback
                 style={[styles.categoryButton, { height: 219 }]}
                 onPress={goToComponents}
@@ -170,7 +147,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           >
             <Box flex={1} borderBottomLeftRadius={BORDER_BOTTOM_LEFT_RADIUS}>
               <Image
-                source={Images.bg1}
+                source={Images.BG1}
                 style={{ ...StyleSheet.absoluteFillObject, left: LEFT }}
               />
               <TouchableWithoutFeedback
