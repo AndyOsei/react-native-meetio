@@ -1,6 +1,6 @@
 # REACT NATIVE MEETIO
 
-***under development***
+***still in development***
 
 Are you in need of a high quality production ready template for your next project…
 look no further, check out react-native-meetio,
