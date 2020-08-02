@@ -1,5 +1,7 @@
 # REACT NATIVE MEETIO
 
+***under development***
+
 Are you in need of a high quality production ready template for your next project…
 look no further, check out react-native-meetio,
 A free UI Kit built in react native to speed up your workflow and get your app ready for market in no time...
