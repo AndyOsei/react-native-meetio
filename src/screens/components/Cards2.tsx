@@ -1,15 +1,277 @@
 import React from "react";
 import { StyleSheet, Dimensions, ScrollView, Image } from "react-native";
 
-import { Header, Box, Card, Text, Icons } from "../../components";
+import { Header, Box, Card, Text, Icons, theme } from "../../components";
 import { Images } from "../../constants";
 
-const { width } = Dimensions.get("window");
+const { width, height } = Dimensions.get("window");
+
+const styles = StyleSheet.create({
+  bg5: {
+    ...StyleSheet.absoluteFillObject,
+    width: undefined,
+    height: undefined,
+  },
+});
 
 const Card2 = () => {
   return (
     <Box backgroundColor="lightBlueMagenta100" width={width}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ height: height + height * 0.63 }}
+      >
+        <Card
+          {...StyleSheet.absoluteFillObject}
+          backgroundColor="blueMagenta500"
+          height={392}
+          borderBottomLeftRadius={80}
+          overflow="visible"
+          top={1050}
+          justifyContent="flex-end"
+          paddingHorizontal="xl"
+          borderBottomWidth={2}
+          borderLeftWidth={2}
+          borderBottomColor="lightBlueMagenta50"
+          borderLeftColor="lightBlueMagenta50"
+        >
+          <Box
+            flexDirection="row"
+            style={{ marginBottom: 30 }}
+            justifyContent="space-between"
+          >
+            <Box flexDirection="row">
+              <Image source={Images.AVATAR10} />
+              <Box marginLeft="s">
+                <Text variant="text2" color="white" opacity={0.7}>
+                  Dina Meyer
+                </Text>
+                <Box>
+                  <Text
+                    variant="title2"
+                    fontSize={14}
+                    lineHeight={20}
+                    color="white"
+                  >
+                    Hi everyone!
+                  </Text>
+                </Box>
+              </Box>
+            </Box>
+            <Box>
+              <Text variant="text2" color="white" opacity={0.7}>
+                9 hrs
+              </Text>
+              <Box
+                width={22}
+                height={22}
+                borderRadius={11}
+                backgroundColor="white"
+                justifyContent="center"
+                alignItems="center"
+                style={{ margin: 3 }}
+              >
+                <Text variant="text2" color="lightBlueMagenta400" fontSize={14}>
+                  7
+                </Text>
+              </Box>
+            </Box>
+          </Box>
+        </Card>
+        <Card
+          {...StyleSheet.absoluteFillObject}
+          backgroundColor="blueMagenta500"
+          height={392}
+          borderBottomLeftRadius={80}
+          overflow="visible"
+          top={940}
+          justifyContent="flex-end"
+          paddingHorizontal="xl"
+          borderBottomWidth={1}
+          borderLeftWidth={1}
+          borderBottomColor="darkBlueMagentaSpacer"
+          borderLeftColor="darkBlueMagentaSpacer"
+        >
+          <Box
+            flexDirection="row"
+            style={{ marginBottom: 30 }}
+            justifyContent="space-between"
+          >
+            <Box flexDirection="row">
+              <Image source={Images.AVATAR9} />
+              <Box marginLeft="s">
+                <Text variant="text2" color="white" opacity={0.7}>
+                  Dina Meyer
+                </Text>
+                <Text
+                  variant="title2"
+                  fontSize={14}
+                  lineHeight={20}
+                  color="white"
+                >
+                  Welcome to Yoga Meetup
+                </Text>
+              </Box>
+            </Box>
+            <Box>
+              <Text variant="text2" color="white" opacity={0.7}>
+                9 hrs
+              </Text>
+              <Box
+                width={22}
+                height={22}
+                borderRadius={11}
+                backgroundColor="white"
+                justifyContent="center"
+                alignItems="center"
+                style={{ margin: 3 }}
+              >
+                <Text variant="text2" color="lightBlueMagenta400" fontSize={14}>
+                  5
+                </Text>
+              </Box>
+            </Box>
+          </Box>
+        </Card>
+        <Card
+          {...StyleSheet.absoluteFillObject}
+          height={340}
+          top={900}
+          borderBottomLeftRadius={80}
+        >
+          <Image source={Images.BG5} style={styles.bg5} />
+          <Box
+            flex={1}
+            flexDirection="row"
+            paddingHorizontal="xl"
+            justifyContent="center"
+          >
+            <Box flexDirection="row" alignSelf="center">
+              <Image source={Images.AVATAR8} />
+              <Box marginLeft="m">
+                <Text variant="title2" color="white">
+                  Marcus Brownlee
+                </Text>
+                <Text variant="text1" color="white" opacity={0.56}>
+                  8 Nov
+                </Text>
+              </Box>
+            </Box>
+            <Box
+              flexDirection="row"
+              justifyContent="flex-end"
+              marginTop="m"
+              alignSelf="flex-end"
+            >
+              <Box flexDirection="row" marginBottom="l">
+                <Text
+                  variant="title2"
+                  fontSize={12}
+                  lineHeight={15}
+                  color="white"
+                  style={{ padding: 4 }}
+                >
+                  256
+                </Text>
+                <Icons.Comment strokeColor={theme.colors.white} />
+              </Box>
+              <Box flexDirection="row" marginLeft="m">
+                <Text
+                  variant="title2"
+                  fontSize={12}
+                  lineHeight={15}
+                  color="white"
+                  style={{ padding: 4 }}
+                >
+                  4K
+                </Text>
+                <Icons.Like strokeColor={theme.colors.white} />
+              </Box>
+            </Box>
+          </Box>
+        </Card>
+        <Card
+          {...StyleSheet.absoluteFillObject}
+          backgroundColor="white"
+          height={392}
+          borderBottomLeftRadius={80}
+          overflow="visible"
+          top={620}
+          justifyContent="flex-end"
+          paddingHorizontal="xl"
+          borderBottomWidth={2}
+          borderLeftWidth={2}
+          borderBottomColor="lightBlueMagenta50"
+          borderLeftColor="lightBlueMagenta50"
+        >
+          <Box
+            flexDirection="row"
+            style={{ marginBottom: 30 }}
+            justifyContent="space-between"
+          >
+            <Box flexDirection="row">
+              <Image source={Images.AVATAR7} />
+              <Box marginLeft="s">
+                <Text variant="text2" color="blueMagenta">
+                  Stephane Moreau
+                </Text>
+                <Box width={"90%"}>
+                  <Text
+                    variant="text2"
+                    fontSize={14}
+                    lineHeight={20}
+                    color="darkBlueMagenta800"
+                  >
+                    Check out this Meetup with Montreal
+                  </Text>
+                </Box>
+              </Box>
+            </Box>
+            <Text variant="text2" color="blueMagenta">
+              Aug 19
+            </Text>
+          </Box>
+        </Card>
+        <Card
+          {...StyleSheet.absoluteFillObject}
+          backgroundColor="white"
+          height={392}
+          borderBottomLeftRadius={80}
+          overflow="visible"
+          top={510}
+          justifyContent="flex-end"
+          paddingHorizontal="xl"
+          borderBottomWidth={2}
+          borderLeftWidth={2}
+          borderBottomColor="lightBlueMagenta50"
+          borderLeftColor="lightBlueMagenta50"
+        >
+          <Box
+            flexDirection="row"
+            style={{ marginBottom: 30 }}
+            justifyContent="space-between"
+          >
+            <Box flexDirection="row">
+              <Image source={Images.AVATAR6} />
+              <Box marginLeft="s">
+                <Text variant="text2" color="blueMagenta">
+                  Dina Meyer
+                </Text>
+                <Text
+                  variant="text2"
+                  fontSize={14}
+                  lineHeight={20}
+                  color="darkBlueMagenta800"
+                >
+                  Hello
+                </Text>
+              </Box>
+            </Box>
+            <Text variant="text2" color="blueMagenta">
+              9 hrs
+            </Text>
+          </Box>
+        </Card>
         <Card
           {...StyleSheet.absoluteFillObject}
           backgroundColor="darkBlueMagenta800"
