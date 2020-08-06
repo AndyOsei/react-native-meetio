@@ -1,4 +1,5 @@
-export { default as Back } from "./Back";
+export { default as ArrowLeft } from "./ArrowLeft";
+export { default as ArrowRight } from "./ArrowRight";
 export { default as Add } from "./Add";
 export { default as Search } from "./Search";
 export { default as Filter } from "./filter";

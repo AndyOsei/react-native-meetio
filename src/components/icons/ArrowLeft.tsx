@@ -7,7 +7,11 @@ interface Props {
   strokeColor?: string;
 }
 
-function Back({ width = 24, height = 24, strokeColor = "#757575" }: Props) {
+function ArrowLeft({
+  width = 24,
+  height = 24,
+  strokeColor = "#757575",
+}: Props) {
   return (
     <Svg viewBox="0 0 24 24" {...{ width, height }}>
       <Defs>
@@ -31,4 +35,4 @@ function Back({ width = 24, height = 24, strokeColor = "#757575" }: Props) {
   );
 }
 
-export default Back;
+export default ArrowLeft;

@@ -67,12 +67,17 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
   const goToComponents = () => {
     navigation.navigate(AppRoute.COMPONENTS);
   };
+
+  const goToOnboarding = () => {
+    navigation.navigate(AppRoute.OBOARDING);
+  };
+
   return (
     <Box flex={1} backgroundColor="lightBlue300">
       <ScrollView
         contentContainerStyle={{
           paddingBottom: 200,
-          height: height + height / 4,
+          height: height,
         }}
         showsVerticalScrollIndicator={false}
       >
@@ -110,6 +115,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
               <Image source={Images.BG3} style={styles.onboardingImageStyle} />
               <TouchableWithoutFeedback
                 style={[styles.categoryButton, { height: 233 }]}
+                onPress={goToOnboarding}
               >
                 <Box style={styles.categoryTitleContainer}>
                   <Text variant="title1" color="white">
@@ -170,7 +176,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           borderBottomLeftRadius={80}
           leftIcon={
             <Box marginLeft="m">
-              <Icons.Back />
+              <Icons.ArrowLeft />
             </Box>
           }
           rightIcon={
