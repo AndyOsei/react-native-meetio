@@ -1,18 +1,21 @@
 import * as React from "react";
-import { ScrollView } from "react-native-gesture-handler";
-import { Dimensions } from "react-native";
+import { Dimensions, ScrollView, StatusBar } from "react-native";
 
 import { Box } from "../../components";
 
 import Welcome1 from "./Welcome1";
 import Welcome2 from "./Welcome2";
+import Welcome3 from "./Welcome3";
 
 const { width } = Dimensions.get("window");
 
 const Onboarding = () => {
+  const scrollRef = React.useRef<ScrollView>(null);
   return (
     <Box flex={1} backgroundColor="white">
+      <StatusBar barStyle="light-content" />
       <ScrollView
+        ref={scrollRef}
         horizontal
         snapToInterval={width}
         decelerationRate="fast"
@@ -20,7 +23,8 @@ const Onboarding = () => {
         bounces={false}
       >
         <Welcome1 />
-        <Welcome2 />
+        <Welcome2 {...{ scrollRef }} />
+        <Welcome3 />
       </ScrollView>
     </Box>
   );

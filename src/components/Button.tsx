@@ -13,7 +13,7 @@ interface Props {
 
 const Button: React.FC<Props> = ({ label, onPress, style, children }) => {
   return (
-    <TouchableOpacity {...{ style, onPress }}>
+    <TouchableOpacity activeOpacity={0.8} {...{ style, onPress }}>
       {!children && (
         <Box flex={1} justifyContent="center" alignItems="center">
           <Text>{label}</Text>

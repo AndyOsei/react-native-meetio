@@ -1,10 +1,17 @@
 import React from "react";
-import { Dimensions, Image, StyleSheet } from "react-native";
+import { Dimensions, Image, StyleSheet, ScrollView } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTheme } from "@shopify/restyle";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
 
 import { Box, Dot, Text, Card, Button, Theme, Icons } from "../../components";
 import { Images } from "../../constants";
+import { AppStackParamList } from "../../types";
+import AppRoute from "../../navigation/app.routes";
+
+interface Props {
+  scrollRef: React.RefObject<ScrollView>;
+}
 
 const { width } = Dimensions.get("window");
 
@@ -18,10 +25,17 @@ const styles = StyleSheet.create({
 const Welcome1 = () => {
   const insets = useSafeAreaInsets();
   const theme = useTheme<Theme>();
+  const navigation = useNavigation<
+    NavigationProp<AppStackParamList, AppRoute.OBOARDING>
+  >();
+
+  const skip = () => {
+    navigation.goBack();
+  };
 
   return (
     <Box width={width}>
-      <Box flex={0.7}>
+      <Box flex={0.7} backgroundColor="black">
         <Image
           source={Images.BG6}
           style={{
@@ -37,40 +51,25 @@ const Welcome1 = () => {
           padding="l"
         >
           <Box flexDirection="row">
-            <Dot
-              width={8}
-              height={8}
-              borderRadius={4}
-              backgroundColor="white"
-            />
-            <Dot
-              width={8}
-              height={8}
-              borderRadius={4}
-              backgroundColor="white"
-              marginLeft="s"
-              opacity={0.4}
-            />
-            <Dot
-              width={8}
-              height={8}
-              borderRadius={4}
-              backgroundColor="white"
-              marginLeft="s"
-              opacity={0.4}
-            />
-            <Dot
-              width={8}
-              height={8}
-              borderRadius={4}
-              backgroundColor="white"
-              marginLeft="s"
-              opacity={0.4}
-            />
+            {Array(4)
+              .fill(0)
+              .map((_, index) => (
+                <Dot
+                  key={index}
+                  width={8}
+                  height={8}
+                  borderRadius={4}
+                  backgroundColor="white"
+                  style={{ margin: 2 }}
+                  opacity={index === 0 ? 1 : 0.4}
+                />
+              ))}
           </Box>
-          <Text variant="title3" color="white" opacity={0.5}>
-            SKIP
-          </Text>
+          <Button onPress={skip}>
+            <Text variant="title3" color="white" opacity={0.5}>
+              SKIP
+            </Text>
+          </Button>
         </Box>
       </Box>
       <Box flex={0.3} />
