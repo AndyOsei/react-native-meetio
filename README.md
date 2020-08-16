@@ -27,6 +27,8 @@ You can also draw inspiration & ideas from it for your next project or it could 
 - Expo
 - React Navigation v5
 - Shopify/restyle
+- React Native Reanimated
+- React Native Redash
 
 ### Contributing
 If you face an issue or have any contributions, you can open an issue or reach out to me at @andyosei36@gmail.com. Do follow me on [twitter](https://twitter.com/andyosei36).
