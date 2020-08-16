@@ -23,7 +23,8 @@ const palette = {
   blue400: "#4666E5",
   darkCyanBlue: "#132641",
   lightCyanBlue: "#A3A9AF",
-  gray: "#707070",
+  gray600: "#707070",
+  gray500: "#767676",
 };
 
 const theme = {
@@ -50,7 +51,8 @@ const theme = {
     darkCyanBlue: palette.darkCyanBlue,
     lightCyanBlue: palette.lightCyanBlue,
     mainBackground: palette.white,
-    gray: palette.gray,
+    gray600: palette.gray600,
+    gray500: palette.gray500,
     lightBlueMagenta50: palette.lightBlueMagenta50,
   },
   spacing: {

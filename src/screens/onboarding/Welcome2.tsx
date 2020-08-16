@@ -75,7 +75,7 @@ const Welcome2 = ({ scrollRef }: Props) => {
             variant="text1"
             textAlign="center"
             lineHeight={20}
-            color="gray"
+            color="gray600"
             marginVertical="m"
           >
             If you’re offered a seat on a rocket ship, don’t ask what seat! Just

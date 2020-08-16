@@ -8,6 +8,7 @@ const backgrounds = {
   BG7: require("../../assets/images/bg7.png"),
   BG8: require("../../assets/images/bg8.png"),
   BG9: require("../../assets/images/bg9.png"),
+  BG10: require("../../assets/images/bg10.png"),
 };
 
 const avatars = {
