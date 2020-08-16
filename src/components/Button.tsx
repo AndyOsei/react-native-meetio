@@ -8,7 +8,7 @@ interface Props {
   label?: string;
   onPress?: () => void;
   style?: StyleProp<ViewStyle>;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Button: React.FC<Props> = ({ label, onPress, style, children }) => {

@@ -6,6 +6,7 @@ import { Box } from "../../components";
 import Welcome1 from "./Welcome1";
 import Welcome2 from "./Welcome2";
 import Welcome3 from "./Welcome3";
+import Welcome4 from "./Welcome4";
 
 const { width } = Dimensions.get("window");
 
@@ -25,6 +26,7 @@ const Onboarding = () => {
         <Welcome1 />
         <Welcome2 {...{ scrollRef }} />
         <Welcome3 />
+        <Welcome4 />
       </ScrollView>
     </Box>
   );

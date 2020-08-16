@@ -57,7 +57,7 @@ const HeadersInputs = () => {
               leftIcon={
                 <Box marginLeft="m">
                   <RectButton onPress={goBack}>
-                    <Icons.Back />
+                    <Icons.ArrowLeft />
                   </RectButton>
                 </Box>
               }
@@ -89,7 +89,7 @@ const HeadersInputs = () => {
           leftIcon={
             <Box marginLeft="m">
               <RectButton onPress={goBack}>
-                <Icons.Back strokeColor="white" />
+                <Icons.ArrowLeft strokeColor="white" />
               </RectButton>
             </Box>
           }
