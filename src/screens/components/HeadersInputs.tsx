@@ -34,7 +34,7 @@ const HeadersInputs = () => {
 
   const onBlur = (ref: React.RefObject<TextInput>) => {
     ref.current?.setNativeProps({
-      borderBottomColor: theme.colors.gray,
+      borderBottomColor: theme.colors.gray600,
       borderBottomWidth: StyleSheet.hairlineWidth,
     });
   };
@@ -117,7 +117,7 @@ const HeadersInputs = () => {
               onFocus: () => onFocus(inputRef1),
               onBlur: () => onBlur(inputRef1),
               style: {
-                borderBottomColor: theme.colors.gray,
+                borderBottomColor: theme.colors.gray600,
                 borderBottomWidth: StyleSheet.hairlineWidth,
                 padding: 5,
               },
@@ -132,7 +132,7 @@ const HeadersInputs = () => {
               onFocus: () => onFocus(inputRef2),
               onBlur: () => onBlur(inputRef2),
               style: {
-                borderBottomColor: theme.colors.gray,
+                borderBottomColor: theme.colors.gray600,
                 borderBottomWidth: StyleSheet.hairlineWidth,
                 padding: 5,
               },
@@ -154,13 +154,13 @@ const HeadersInputs = () => {
               },
               onBlur: () => {
                 inputRef3.current?.setNativeProps({
-                  borderBottomColor: theme.colors.gray,
+                  borderBottomColor: theme.colors.gray600,
                   borderBottomWidth: StyleSheet.hairlineWidth,
                 });
               },
               style: {
                 padding: 10,
-                borderBottomColor: theme.colors.gray,
+                borderBottomColor: theme.colors.gray600,
                 borderBottomWidth: StyleSheet.hairlineWidth,
               },
             }}

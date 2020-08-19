@@ -31,6 +31,7 @@ const avatars = {
 };
 
 const others = {
+  IMG1: require("../../assets/images/img1.png"),
   FILM: require("../../assets/images/film.png"),
 };
 
